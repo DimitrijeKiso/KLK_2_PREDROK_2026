@@ -1,0 +1,21 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
+ */
+package operacije;
+
+/**
+ *
+ * @author Dimitrije
+ */
+public interface Operacije {
+    
+    public static final int LOGIN = 1;
+    public static final int LOGOUT = 2;
+    public static final int KOMANDA = 3; // DATE MIN_MAX ADD   
+    
+    
+    
+    
+    
+}
