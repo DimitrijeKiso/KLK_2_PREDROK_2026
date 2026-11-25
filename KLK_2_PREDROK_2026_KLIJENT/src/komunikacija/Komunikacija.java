@@ -28,8 +28,9 @@ public class Komunikacija {
     private Komunikacija() {
         try {
             s = new Socket("localhost", 9000);
-            in = new ObjectInputStream(s.getInputStream());
+            
             out = new ObjectOutputStream(s.getOutputStream());
+            in = new ObjectInputStream(s.getInputStream());
         } catch (IOException ex) {
             System.getLogger(Komunikacija.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
         }

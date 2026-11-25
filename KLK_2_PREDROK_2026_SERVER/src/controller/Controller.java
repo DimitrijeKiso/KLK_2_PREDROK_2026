@@ -54,6 +54,45 @@ public class Controller {
     public int getLimit() {
         return limit;
     }
+
+    public String Login(String user) {
+        int brojac = 0;
+        for (Korisnik korisnik : korisnici) {
+            if (korisnik.isPrijavljen() == true) {
+                brojac++;
+            }
+        }
+        
+        if (brojac == 5) {
+            return "ERROR: Server full";
+        }
+        
+        for (Korisnik korisnik : korisnici) {
+            if (korisnik.getKorisnik().equals(user)  ) {
+                if (korisnik.isPrijavljen()) {
+                    return "ERROR: User already logged in.";
+                }
+                else {
+                    korisnik.setPrijavljen(true); 
+                return "SUCCESS: User logged in.";
+                }
+            }
+        }
+        
+        return "ERROR: Unknown user!";
+        
+    }
+
+    public void Logout(String ulogovaniUser) {
+        
+        for (Korisnik korisnik : korisnici) {
+            if (korisnik.getKorisnik().equals(ulogovaniUser)) {
+                korisnik.setPrijavljen(false); 
+            }
+        }
+        
+        
+    }
     
     
     

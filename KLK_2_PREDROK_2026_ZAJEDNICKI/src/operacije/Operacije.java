@@ -12,8 +12,8 @@ public interface Operacije {
     
     public static final int LOGIN = 1;
     public static final int LOGOUT = 2;
-    public static final int KOMANDA = 3; // DATE MIN_MAX ADD   
-    
+    public static final int KOMANDA = 3; // u ovom sluc cemo samo ovo koristitit
+        
     
     
     
